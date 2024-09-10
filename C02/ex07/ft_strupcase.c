@@ -1,41 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vilopes <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/07 17:19:23 by vilopes           #+#    #+#             */
-/*   Updated: 2024/09/09 22:05:06 by vilopes          ###   ########.fr       */
+/*   Created: 2024/09/09 23:55:57 by vilopes           #+#    #+#             */
+/*   Updated: 2024/09/10 00:31:09 by vilopes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
 #include <stdio.h>
 
-void    ft_ultimate_ft(int *********nbr);
+char	*ft_strupcase(char *str);
 
 int	main(void)
 {
-    int n = 0;
-    int *ptr1 = &n;
-    int **ptr2 = &ptr1;
-    int ***ptr3 = &ptr2;
-    int ****ptr4 = &ptr3;
-    int *****ptr5 = &ptr4;
-    int ******ptr6 = &ptr5;
-    int *******ptr7 = &ptr6;
-    int ********ptr8 = &ptr7;
-    int *********ptr9 = &ptr8;
+	char	text[50] = {"vinicius lopes de souza"};
 
-    ft_ultimate_ft(ptr9);
-    
-    printf("Value of n: %d\n", n);
-    return 0;
+	ft_strupcase(text);
+	printf("%s\n", text);
+	return 0;
 }
 */
-
-void    ft_ultimate_ft(int *********nbr)
+char	*ft_strupcase(char *str)
 {
-	*********nbr = 42;
-}
+	int	i;
 
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 97 && str[i] <= 122)
+			str[i] -= 32;
+		i++;
+	}
+	return (str);
+}

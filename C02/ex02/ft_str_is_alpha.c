@@ -1,41 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vilopes <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/07 17:19:23 by vilopes           #+#    #+#             */
-/*   Updated: 2024/09/09 22:05:06 by vilopes          ###   ########.fr       */
+/*   Created: 2024/09/09 22:08:16 by vilopes           #+#    #+#             */
+/*   Updated: 2024/09/09 23:10:28 by vilopes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
 #include <stdio.h>
 
-void    ft_ultimate_ft(int *********nbr);
+int	ft_str_is_alpha(char *str);
 
 int	main(void)
 {
-    int n = 0;
-    int *ptr1 = &n;
-    int **ptr2 = &ptr1;
-    int ***ptr3 = &ptr2;
-    int ****ptr4 = &ptr3;
-    int *****ptr5 = &ptr4;
-    int ******ptr6 = &ptr5;
-    int *******ptr7 = &ptr6;
-    int ********ptr8 = &ptr7;
-    int *********ptr9 = &ptr8;
-
-    ft_ultimate_ft(ptr9);
-    
-    printf("Value of n: %d\n", n);
-    return 0;
+	ft_str_is_alpha("abcdefghijkl");
+	ft_str_is_alpha("Hello Woi90rld!");
+	return (0);
 }
 */
-
-void    ft_ultimate_ft(int *********nbr)
+int	ft_str_is_alpha(char *str)
 {
-	*********nbr = 42;
-}
+	int	i;
 
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if ((str[i] >= 97 && str[i] <= 122) || (str[i] >= 65 && str[i] <= 90))
+			i++;
+		else
+			return (0);
+	}
+	return (1);
+}

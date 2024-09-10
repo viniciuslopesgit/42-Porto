@@ -1,41 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vilopes <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/07 17:19:23 by vilopes           #+#    #+#             */
-/*   Updated: 2024/09/09 22:05:06 by vilopes          ###   ########.fr       */
+/*   Created: 2024/09/09 23:14:48 by vilopes           #+#    #+#             */
+/*   Updated: 2024/09/09 23:24:54 by vilopes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
 #include <stdio.h>
 
-void    ft_ultimate_ft(int *********nbr);
+int	ft_str_is_numeric(char *str);
 
 int	main(void)
 {
-    int n = 0;
-    int *ptr1 = &n;
-    int **ptr2 = &ptr1;
-    int ***ptr3 = &ptr2;
-    int ****ptr4 = &ptr3;
-    int *****ptr5 = &ptr4;
-    int ******ptr6 = &ptr5;
-    int *******ptr7 = &ptr6;
-    int ********ptr8 = &ptr7;
-    int *********ptr9 = &ptr8;
-
-    ft_ultimate_ft(ptr9);
-    
-    printf("Value of n: %d\n", n);
-    return 0;
+	char	teste[20] = "1233ia546546464";
+	printf("%i", ft_str_is_numeric(teste));
+	return 0;
 }
 */
-
-void    ft_ultimate_ft(int *********nbr)
+int	ft_str_is_numeric(char *str)
 {
-	*********nbr = 42;
-}
+	int	i;
 
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if ((str[i] >= 48 && str[i] <= 57))
+			i++;
+		else
+			return (0);
+	}
+	return (1);
+}

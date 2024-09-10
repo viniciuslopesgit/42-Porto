@@ -1,41 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vilopes <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/07 17:19:23 by vilopes           #+#    #+#             */
-/*   Updated: 2024/09/09 22:05:06 by vilopes          ###   ########.fr       */
+/*   Created: 2024/09/09 21:18:03 by vilopes           #+#    #+#             */
+/*   Updated: 2024/09/09 23:03:55 by vilopes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
 #include <stdio.h>
 
-void    ft_ultimate_ft(int *********nbr);
+char	*ft_strncpy(char *dest, char *src, unsigned int n);
 
 int	main(void)
-{
-    int n = 0;
-    int *ptr1 = &n;
-    int **ptr2 = &ptr1;
-    int ***ptr3 = &ptr2;
-    int ****ptr4 = &ptr3;
-    int *****ptr5 = &ptr4;
-    int ******ptr6 = &ptr5;
-    int *******ptr7 = &ptr6;
-    int ********ptr8 = &ptr7;
-    int *********ptr9 = &ptr8;
-
-    ft_ultimate_ft(ptr9);
-    
-    printf("Value of n: %d\n", n);
-    return 0;
+{	
+	char	dest[50];
+	char	src[50] = {"Hello Word!"};
+	
+	ft_strncpy(dest, src, 5);
+	printf("%s", dest);
+	return (0);
 }
 */
-
-void    ft_ultimate_ft(int *********nbr)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	*********nbr = 42;
-}
+	unsigned int	i;
 
+	i = 0;
+	while (src[i] != '\0' && i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
+}
