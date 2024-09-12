@@ -6,7 +6,7 @@
 /*   By: vilopes <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 20:03:59 by vilopes           #+#    #+#             */
-/*   Updated: 2024/09/10 23:37:51 by vilopes          ###   ########.fr       */
+/*   Updated: 2024/09/11 18:35:05 by vilopes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
@@ -19,8 +19,8 @@ int	main(void)
 	char	destino[20];
 //	char	codigo[20] = "Hello World";
 	
-	ft_strcpy(destino, "Hello World!");
-	printf("%s",destino );
+	ft_strcpy(destino, "Hello World! Piscine 42.");
+	printf("Resposta:	%s",destino );
 	return 0;
 }
 */

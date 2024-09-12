@@ -6,7 +6,7 @@
 /*   By: vilopes <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 21:18:03 by vilopes           #+#    #+#             */
-/*   Updated: 2024/09/09 23:03:55 by vilopes          ###   ########.fr       */
+/*   Updated: 2024/09/11 18:36:43 by vilopes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
@@ -20,7 +20,7 @@ int	main(void)
 	char	src[50] = {"Hello Word!"};
 	
 	ft_strncpy(dest, src, 5);
-	printf("%s", dest);
+	printf("Resposta:	%s", dest);
 	return (0);
 }
 */
