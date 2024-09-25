@@ -6,7 +6,7 @@
 /*   By: vilopes <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 18:54:54 by vilopes           #+#    #+#             */
-/*   Updated: 2024/09/16 19:44:30 by vilopes          ###   ########.fr       */
+/*   Updated: 2024/09/25 19:13:28 by vilopes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@ void	ft_putchar(char c)
 
 void	ft_putnbr(int nb)
 {
-	int	nb_print;
-
 	if (nb == -2147483648)
 	{
 		ft_putchar('-');
@@ -50,12 +48,7 @@ void	ft_putnbr(int nb)
 		if (nb >= 10)
 		{
 			ft_putnbr(nb / 10);
-			ft_putchar(nb % 10 + '0');
 		}
-		if (nb < 10 && nb >= 0)
-		{
-			nb_print = nb + '0';
-			ft_putchar(nb_print);
-		}
+		ft_putchar((nb % 10) + '0');
 	}
 }

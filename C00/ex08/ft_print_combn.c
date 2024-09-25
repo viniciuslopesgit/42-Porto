@@ -1,58 +1,80 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_combn.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vilopes <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/25 20:59:23 by vilopes           #+#    #+#             */
+/*   Updated: 2024/09/25 21:08:24 by vilopes          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <unistd.h>
-
+/*
 void	ft_print_combn(int n);
 void	ft_putchar(char c);
+int		ft_atoi(char *str);
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	ft_print_combn(3);
+	ft_print_combn(ft_atoi(argv[1]));
 	return (0);
 }
-
+*/
 void	ft_putchar(char c)
 {
 	write (1, &c, 1);
 }
 
+int	ft_atoi(char *str)
+{
+	int		result;
+	int		sign;
+	int		i;
+
+	result = 0;
+	sign = 1;
+	i = 0;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+	{
+		i++;
+	}
+	while (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			sign = sign * -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		result = (result * 10) + (str[i] - '0');
+		i++;
+	}
+	return (result * sign);
+}
+
 void	ft_print_combn(int n)
 {
-	int	temp1;
-	int	temp2;
-	int	save_n;
+	int		i;
+	int		j;
 
-	while (n < 100)
+	i = 0;
+	while (i < 10)
 	{
-		while ( save_n > 1)
+		j = i + 1;
+		while (j < 10)
 		{
-			ft_putchar('0');
-			save_n--;
-		}
-		if ( n >= 10) 
-		{
-			temp1 = n / 10;
-			temp2 = n % 10;
-
-			if (temp1 < temp2)
+			ft_putchar(i + '0');
+			ft_putchar(j + '0');
+			if (i != 8 || j != 9)
 			{
-				ft_putchar(n / 10 + '0');
-				ft_putchar(n % 10 + '0');
-				
-				if (n != 89)
-				{
-					ft_putchar(',');
-					ft_putchar(' ');
-				}
+				ft_putchar(',');
+				ft_putchar(' ');
 			}
+			j++;
 		}
-		else
-		{
-			ft_putchar('0');
-			ft_putchar(n + '0');
-			ft_putchar(',');
-			ft_putchar(' ');
-		}
-		n++;
+		i++;
 	}
 	ft_putchar('\n');
 }
