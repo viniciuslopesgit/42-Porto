@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vilopes <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/17 19:10:00 by vilopes           #+#    #+#             */
-/*   Updated: 2024/10/18 21:14:11 by vilopes          ###   ########.fr       */
+/*   Created: 2024/10/19 21:58:44 by vilopes           #+#    #+#             */
+/*   Updated: 2024/10/19 23:19:54 by vilopes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-void	ft_putchar(char c);
-void	ft_print_alphabet(void);
-
-int	main(void)
-{
-	ft_print_alphabet();
-	return (0);
-}
-*/
-
 void	ft_putchar(char c);
 
-void	ft_print_alphabet(void)
+int	main(int argc, char **argv)
 {
-	char	a;
+	int	i;
+	int	j;
 
-	a = 'a';
-	while (a <= 'z')
+	i = 1;
+	while (i < argc)
 	{
-		ft_putchar(a);
-		a++;
+		j = 0;
+		while (argv[i][j] != '\0')
+		{
+			ft_putchar(argv[i][j]);
+			j++;
+		}
+		ft_putchar('\n');
+		i++;
 	}
+	return (0);
 }

@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vilopes <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/17 19:10:00 by vilopes           #+#    #+#             */
-/*   Updated: 2024/10/18 21:14:11 by vilopes          ###   ########.fr       */
+/*   Created: 2024/10/19 21:48:26 by vilopes           #+#    #+#             */
+/*   Updated: 2024/10/19 21:58:14 by vilopes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 /*
-void	ft_putchar(char c);
-void	ft_print_alphabet(void);
+#include <stdio.h>
 
-int	main(void)
+int	ft_strcmp(char *s1, char *s2);
+
+int	main(int argc, char **argv)
 {
-	ft_print_alphabet();
+	printf("Result: %i", ft_strcmp(argv[1], argv[2]));
 	return (0);
 }
 */
-
-void	ft_putchar(char c);
-
-void	ft_print_alphabet(void)
+int	ft_strcmp(char *s1, char *s2)
 {
-	char	a;
+	unsigned int	i;
 
-	a = 'a';
-	while (a <= 'z')
-	{
-		ft_putchar(a);
-		a++;
-	}
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] != '\0')
+		i++;
+	return (s1[i] - s2[i]);
 }

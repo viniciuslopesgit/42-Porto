@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vilopes <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/17 19:10:00 by vilopes           #+#    #+#             */
-/*   Updated: 2024/10/18 21:14:11 by vilopes          ###   ########.fr       */
+/*   Created: 2024/10/20 03:56:02 by vilopes           #+#    #+#             */
+/*   Updated: 2024/10/20 03:56:08 by vilopes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-void	ft_putchar(char c);
-void	ft_print_alphabet(void);
+#ifndef FT_POINT_H
+# define FT_POINT_H
 
-int	main(void)
+typedef struct s_point
 {
-	ft_print_alphabet();
-	return (0);
-}
-*/
+	int	x;
+	int	y;
+}	t_point;
 
-void	ft_putchar(char c);
-
-void	ft_print_alphabet(void)
-{
-	char	a;
-
-	a = 'a';
-	while (a <= 'z')
-	{
-		ft_putchar(a);
-		a++;
-	}
-}
+#endif
